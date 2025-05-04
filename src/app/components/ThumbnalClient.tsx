@@ -86,9 +86,16 @@ export default function ThumbnailClient() {
           Download
         </button>
       </div>
-      {imageSrc && (
-        <img src={imageSrc} alt="Generated thumbnail" className="mt-4 border max-w-full h-auto" />
-      )}
+      <div className="relative w-full max-w-3xl aspect-[16/9] border mt-4">
+        {imageSrc && (
+          <img
+            src={imageSrc}
+            alt="Generated thumbnail"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
+      </div>
+
       {/* Keeping the canvas for now, but it won't be used */}
       <canvas ref={canvasRef} width={1280} height={720} className="hidden" />
     </div>
