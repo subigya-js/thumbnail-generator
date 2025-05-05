@@ -86,7 +86,7 @@ export default function ThumbnailClient() {
           Download
         </button>
       </div>
-      <div className="relative w-full max-w-3xl aspect-[16/9] border mt-4">
+      <div className="relative w-full max-w-4xl aspect-[16/9] border mt-4 h-96">
         {imageSrc && (
           <img
             src={imageSrc}
